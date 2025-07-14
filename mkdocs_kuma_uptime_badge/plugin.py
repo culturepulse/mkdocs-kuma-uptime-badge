@@ -10,7 +10,7 @@ to full Uptime Kuma badge links:
 
 import re
 import urllib.parse
-from typing import Dict, Any
+from typing import Any, Dict
 
 from mkdocs.config import config_options
 from mkdocs.config.defaults import MkDocsConfig

@@ -13,3 +13,5 @@ try:
 except importlib.metadata.PackageNotFoundError:
     # Package is not installed
     __version__ = "0.0.0"
+
+__all__ = ["UptimeBadgePlugin"]
