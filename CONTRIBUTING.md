@@ -1,6 +1,6 @@
-# Contributing to MkDocs Uptime Badge Plugin
+# Contributing to MkDocs Kuma Uptime Badge Plugin
 
-Thank you for considering contributing to the MkDocs Uptime Badge Plugin! This document provides guidelines and instructions for contributing to this project.
+Thank you for considering contributing to the MkDocs Kuma Uptime Badge Plugin! This document provides guidelines and instructions for contributing to this project.
 
 ## Development Environment Setup
 
@@ -11,8 +11,8 @@ Thank you for considering contributing to the MkDocs Uptime Badge Plugin! This d
 
 2. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/mkdocs-uptime-badge.git
-   cd mkdocs-uptime-badge
+   git clone https://github.com/yourusername/mkdocs-kuma-uptime-badge.git
+   cd mkdocs-kuma-uptime-badge
    ```
 
 3. Install the package and all dependencies (including development dependencies):

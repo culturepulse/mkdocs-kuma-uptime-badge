@@ -1,3 +1,3 @@
 """
-Test package for the MkDocs Uptime Badge Plugin.
+Test package for the MkDocs Kuma Uptime Badge Plugin.
 """

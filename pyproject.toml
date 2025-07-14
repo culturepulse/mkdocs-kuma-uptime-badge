@@ -28,7 +28,7 @@ ruff = "^0.1.0"
 build = "^0.10.0"
 
 [tool.poetry.plugins."mkdocs.plugins"]
-uptime-badge = "uptime_badge:UptimeBadgePlugin"
+kuma-uptime-badge = "mkdocs_kuma_uptime_badge:UptimeBadgePlugin"
 
 [tool.ruff]
 select = ["E", "F", "I"]

@@ -1,6 +1,6 @@
 # Advanced Examples
 
-This page demonstrates more advanced usage of the MkDocs Uptime Badge Plugin.
+This page demonstrates more advanced usage of the MkDocs Kuma Uptime Badge Plugin.
 
 ## Different Badge Types
 

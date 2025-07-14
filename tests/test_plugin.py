@@ -1,5 +1,5 @@
 """
-Tests for the MkDocs Uptime Badge Plugin.
+Tests for the MkDocs Kuma Uptime Badge Plugin.
 """
 
 from mkdocs.config.defaults import MkDocsConfig

@@ -1,9 +1,9 @@
 site_name: Uptime Badge Demo
-site_description: Demo site for the MkDocs Uptime Badge Plugin
+site_description: Demo site for the MkDocs Kuma Uptime Badge Plugin
 
 plugins:
   - search
-  - uptime-badge:
+  - kuma-uptime-badge:
       base_url: https://demo.uptime-kuma.example.com
 
 nav:

@@ -1,4 +1,4 @@
-# MkDocs Uptime Badge Plugin
+# MkDocs Kuma Uptime Badge Plugin
 
 A tiny MkDocs plugin that converts shorthand placeholders to full Uptime Kuma badge links during the build.
 
@@ -13,15 +13,15 @@ pip install mkdocs-kuma-uptime-badge
 Using Poetry:
 
 ```bash
-poetry add mkdocs-uptime-badge
+poetry add mkdocs-kuma-uptime-badge
 ```
 
 For development:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mkdocs-uptime-badge.git
-cd mkdocs-uptime-badge
+git clone https://github.com/yourusername/mkdocs-kuma-uptime-badge.git
+cd mkdocs-kuma-uptime-badge
 
 # Install with Poetry (recommended)
 poetry install
@@ -37,8 +37,8 @@ pip install -e .
 ```yaml
 plugins:
   - search
-  - uptime-badge:
-      base_url: https://your-kuma-instance.example.com  # Optional, defaults to https://kuma.intra
+  - kuma-uptime-badge:
+      base_url: https://your-kuma-instance.example.com
 ```
 
 2. In your Markdown files, use the shorthand syntax:

@@ -1,5 +1,5 @@
 """
-MkDocs Uptime Badge Plugin.
+MkDocs Kuma Uptime Badge Plugin.
 
 A plugin that converts shorthand placeholders to full Uptime Kuma badge links.
 """

@@ -1,6 +1,6 @@
-# MkDocs Uptime Badge Plugin Demo
+# MkDocs Kuma Uptime Badge Plugin Demo
 
-This is a demonstration of the MkDocs Uptime Badge Plugin, which converts shorthand placeholders to full Uptime Kuma badge links during the build.
+This is a demonstration of the MkDocs Kuma Uptime Badge Plugin, which converts shorthand placeholders to full Uptime Kuma badge links during the build.
 
 ## Basic Example
 
