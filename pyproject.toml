@@ -19,7 +19,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.13"
+python = ">=3.10"
 mkdocs = ">=1.0.0"
 
 [tool.poetry.group.dev.dependencies]
