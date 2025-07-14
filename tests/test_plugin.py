@@ -4,7 +4,7 @@ Tests for the MkDocs Uptime Badge Plugin.
 
 from mkdocs.config.defaults import MkDocsConfig
 
-from uptime_badge.plugin import UptimeBadgePlugin
+from mkdocs_kuma_uptime_badge.plugin import UptimeBadgePlugin
 
 
 def test_simple_case():
@@ -12,10 +12,10 @@ def test_simple_case():
     plugin = UptimeBadgePlugin()
     plugin.config = {'base_url': 'https://kuma.intra'}
     plugin.on_config(MkDocsConfig())
-    
+
     markdown = "Check our status: {{uptime id=1}}"
     expected = "Check our status: ![status](https://kuma.intra/api/badge/1/status)"
-    
+
     result = plugin.on_page_markdown(markdown)
     assert result == expected
 
@@ -25,7 +25,7 @@ def test_multiple_tags_per_page():
     plugin = UptimeBadgePlugin()
     plugin.config = {'base_url': 'https://kuma.intra'}
     plugin.on_config(MkDocsConfig())
-    
+
     markdown = """
 # Status Page
 
@@ -40,7 +40,7 @@ Main service: ![status](https://kuma.intra/api/badge/1/status)
 API: ![uptime](https://kuma.intra/api/badge/2/uptime/24)
 Database: ![ping](https://kuma.intra/api/badge/3/ping/24)
 """
-    
+
     result = plugin.on_page_markdown(markdown)
     assert result == expected
 
@@ -50,10 +50,10 @@ def test_missing_hours():
     plugin = UptimeBadgePlugin()
     plugin.config = {'base_url': 'https://kuma.intra'}
     plugin.on_config(MkDocsConfig())
-    
+
     markdown = "Uptime: {{uptime id=1 type=uptime}}"
     expected = "Uptime: ![uptime](https://kuma.intra/api/badge/1/uptime)"
-    
+
     result = plugin.on_page_markdown(markdown)
     assert result == expected
 
@@ -63,10 +63,10 @@ def test_unsafe_characters_in_params():
     plugin = UptimeBadgePlugin()
     plugin.config = {'base_url': 'https://kuma.intra'}
     plugin.on_config(MkDocsConfig())
-    
+
     markdown = 'Status: {{uptime id=1 upLabel="Service & API" downLabel="Down & Out"}}'
     expected = 'Status: ![status](https://kuma.intra/api/badge/1/status?upLabel=Service+%26+API&downLabel=Down+%26+Out)'
-    
+
     result = plugin.on_page_markdown(markdown)
     assert result == expected
 
@@ -76,7 +76,7 @@ def test_badge_types_without_hours():
     plugin = UptimeBadgePlugin()
     plugin.config = {'base_url': 'https://kuma.intra'}
     plugin.on_config(MkDocsConfig())
-    
+
     markdown = """
 Status: {{uptime id=1 type=status}}
 Certificate: {{uptime id=2 type=cert-exp}}
@@ -85,7 +85,7 @@ Certificate: {{uptime id=2 type=cert-exp}}
 Status: ![status](https://kuma.intra/api/badge/1/status)
 Certificate: ![cert-exp](https://kuma.intra/api/badge/2/cert-exp)
 """
-    
+
     result = plugin.on_page_markdown(markdown)
     assert result == expected
 
@@ -95,10 +95,10 @@ def test_custom_base_url():
     plugin = UptimeBadgePlugin()
     plugin.config = {'base_url': 'https://custom.example.com'}
     plugin.on_config(MkDocsConfig())
-    
+
     markdown = "Status: {{uptime id=1}}"
     expected = "Status: ![status](https://custom.example.com/api/badge/1/status)"
-    
+
     result = plugin.on_page_markdown(markdown)
     assert result == expected
 
@@ -108,9 +108,9 @@ def test_no_match():
     plugin = UptimeBadgePlugin()
     plugin.config = {'base_url': 'https://kuma.intra'}
     plugin.on_config(MkDocsConfig())
-    
+
     markdown = "# No uptime tags here\n\nJust regular markdown content."
-    
+
     result = plugin.on_page_markdown(markdown)
     assert result == markdown
 
@@ -120,10 +120,10 @@ def test_quoted_values():
     plugin = UptimeBadgePlugin()
     plugin.config = {'base_url': 'https://kuma.intra'}
     plugin.on_config(MkDocsConfig())
-    
+
     markdown = 'Label: {{uptime id=1 label="Response Time" labelSuffix="ms"}}'
     expected = 'Label: ![status](https://kuma.intra/api/badge/1/status?label=Response+Time&labelSuffix=ms)'
-    
+
     result = plugin.on_page_markdown(markdown)
     assert result == expected
 
@@ -133,8 +133,8 @@ def test_missing_id():
     plugin = UptimeBadgePlugin()
     plugin.config = {'base_url': 'https://kuma.intra'}
     plugin.on_config(MkDocsConfig())
-    
+
     markdown = "Invalid: {{uptime type=status}}"
-    
+
     result = plugin.on_page_markdown(markdown)
     assert result == markdown
