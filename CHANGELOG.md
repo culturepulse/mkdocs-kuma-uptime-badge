@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [changelog.md](https://changelog.md/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.1.0 - 2024-11-01
+## 0.1.0 - 2025-07-14
 
 - **Added**: Initial release of the MkDocs Kuma Uptime Badge Plugin
 - **Added**: Support for converting shorthand placeholders to full Uptime Kuma badge links
