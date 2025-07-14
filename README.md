@@ -20,7 +20,7 @@ For development:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mkdocs-kuma-uptime-badge.git
+git clone https://github.com/culturepulse/mkdocs-kuma-uptime-badge.git
 cd mkdocs-kuma-uptime-badge
 
 # Install with Poetry (recommended)
@@ -131,6 +131,5 @@ The plugin supports the following configuration options:
 
 - `base_url`: The base URL of your Uptime Kuma instance (default: `https://kuma.intra`)
 
-## License
-
-MIT
+---
+Made with ❤️ and ☕️ by [CulturePulse](https://www.culturepulse.ai/) development team
